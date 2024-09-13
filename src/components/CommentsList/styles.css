@@ -1,0 +1,25 @@
+.comments_list {
+	flex: 1;
+	gap: 12px;
+	display: flex;
+	overflow-y: auto;
+	list-style: none;
+	flex-direction: column-reverse;
+}
+
+.comments_list li {
+	display: grid;
+	grid-template-rows: 1fr;
+	transition: translate 0.4s ease, grid-template-rows 0.4s linear;
+
+	@starting-style {
+		translate: 0 100%;
+		grid-template-rows: 0fr;
+	}
+}
+
+@media (min-width: 500px) {
+	.comments_list {
+		padding: 0 20px;
+	}
+}

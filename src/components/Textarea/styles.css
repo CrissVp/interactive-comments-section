@@ -1,0 +1,12 @@
+.form__textarea {
+	resize: none;
+  overflow: hidden;
+  min-height: 80px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: 1px solid var(--light-gray);
+}
+
+.form__textarea:focus {
+	border: 1px solid var(--moderate-blue);
+}

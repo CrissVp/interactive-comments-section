@@ -1,0 +1,74 @@
+.form {
+	padding: 12px;
+	margin-top: 12px;
+	border-radius: 8px;
+	background-color: var(--white);
+
+	gap: 12px;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: 40px 1fr 80px;
+	grid-template-areas:
+		'textarea textarea textarea'
+		'img . button';
+}
+
+.form--update .form {
+	gap: 12px;
+	padding: 0;
+	margin-top: 0;
+	grid-template-areas:
+		'textarea textarea textarea'
+		'. . button';
+}
+
+.form--update .form img {
+	display: none;
+}
+
+.form--animated {
+	overflow: hidden;
+	grid-template-rows: 1fr;
+	transition: translate 0.4s ease, grid-template-rows 0.4s linear;
+
+	@starting-style {
+		grid-template-rows: 0fr;
+	}
+}
+
+.form--visible {
+	display: grid;
+}
+
+.form--hidden {
+	display: none;
+	grid-template-rows: 0fr;
+	transition: translate 0.4s ease, grid-template-rows 0.4s linear, display 0.4s allow-discrete;
+
+	.form {
+		margin: 0;
+		padding: 0;
+		transition: padding 0.4s ease, margin 0.4s ease;
+	}
+}
+
+.form img {
+	grid-area: img;
+
+	width: 40px;
+	height: 40px;
+}
+
+.form textarea {
+	grid-area: textarea;
+}
+
+.form button {
+	grid-area: button;
+}
+
+@media (min-width: 376px) {
+	.form {
+		grid-template-areas: 'img textarea button';
+	}
+}

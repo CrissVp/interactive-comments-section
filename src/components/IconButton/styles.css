@@ -1,0 +1,79 @@
+.btn {
+	gap: 6px;
+	display: flex;
+	cursor: pointer;
+	font-weight: 500;
+	align-items: center;
+	color: var(--moderate-blue);
+}
+
+.icon {
+	width: 14px;
+	height: 14px;
+	mask-position: center;
+	mask-repeat: no-repeat;
+	background-color: var(--moderate-blue);
+}
+
+.btn:hover {
+	color: var(--light-grayish-blue);
+
+	.icon {
+		background-color: var(--light-grayish-blue);
+	}
+}
+
+.btn--delete {
+	color: var(--soft-red);
+
+	.icon {
+		mask-image: url('/icon-delete.svg');
+		background-color: var(--soft-red);
+	}
+}
+
+.btn--delete:hover {
+	color: var(--pale-red);
+
+	.icon {
+		background-color: var(--pale-red);
+	}
+}
+
+.btn--plus {
+	.icon {
+		mask-image: url('/icon-plus.svg');
+		background-color: var(--light-grayish-blue);
+	}
+}
+
+.btn--plus:hover {
+	.icon {
+		background-color: var(--moderate-blue);
+	}
+}
+
+.btn--minus {
+	.icon {
+		mask-image: url('/icon-minus.svg');
+		background-color: var(--light-grayish-blue);
+	}
+}
+
+.btn--minus:hover {
+	.icon {
+		background-color: var(--moderate-blue);
+	}
+}
+
+.btn--reply {
+	.icon {
+		mask-image: url('/icon-reply.svg');
+	}
+}
+
+.btn--edit {
+	.icon {
+		mask-image: url('/icon-edit.svg');
+	}
+}

@@ -1,0 +1,66 @@
+.modal {
+	&[open] {
+		inset: 0;
+		z-index: 20;
+		width: 100%;
+		height: 100dvh;
+		display: flex;
+		position: fixed;
+		align-items: center;
+		justify-content: center;
+		background-color: #00000098;
+
+		.modal__content {
+			gap: 20px;
+			scale: 1;
+			padding: 20px;
+			display: flex;
+			max-width: 400px;
+			border-radius: 8px;
+			text-wrap: pretty;
+			flex-direction: column;
+			background-color: var(--white);
+			transition: scale 0.4s ease;
+
+			@starting-style {
+				scale: 0;
+			}
+		}
+	}
+}
+
+.modal__content h2 {
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--dark-blue);
+}
+
+.modal__content p {
+	color: var(--grayish-blue);
+}
+
+.modal__butons {
+	gap: 20px;
+	display: flex;
+}
+
+.modal__btn {
+	flex: 1;
+	padding: 12px;
+	cursor: pointer;
+	border-radius: 8px;
+	color: var(--white);
+	background-color: var(--grayish-blue);
+}
+
+.modal__btn:hover {
+	background-color: var(--light-gray);
+}
+
+.modal__btn--delete {
+	background-color: var(--soft-red);
+}
+
+.modal__btn--delete:hover {
+	background-color: var(--pale-red);
+}
